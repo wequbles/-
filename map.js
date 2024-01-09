@@ -4,12 +4,22 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
 		e.preventDefault();
+		const targetId = this.getAttribute('href');
+		scrollTo(targetId);
+	});
 
-		document.querySelector(this.getAttribute('href')).scrollIntoView({
-			behavior: 'smooth'
-		});
+	anchor.addEventListener('touchstart', function (e) {
+		e.preventDefault();
+		const targetId = this.getAttribute('href');
+		scrollTo(targetId);
 	});
 });
+
+function scrollTo(targetId) {
+	document.querySelector(targetId).scrollIntoView({
+		behavior: 'smooth'
+	});
+}
 
 const phoneNumberBlock = document.getElementById('phone_number');
 const phoneNumber = phoneNumberBlock.getAttribute('data-phone-number');
