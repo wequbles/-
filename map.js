@@ -21,6 +21,7 @@ function scrollTo(targetId) {
 	});
 }
 
+/* Копирование номера телефона */
 const phoneNumberBlock = document.getElementById('phone_number');
 const phoneNumber = phoneNumberBlock.getAttribute('data-phone-number');
 
