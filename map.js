@@ -1,25 +1,28 @@
 "use strict";
 
 /* Прокручивание к контактам */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-	anchor.addEventListener('click', function (e) {
-		e.preventDefault();
-		const targetId = this.getAttribute('href');
-		scrollTo(targetId);
-	});
+    document.addEventListener('DOMContentLoaded', function() {
+        // Находим все ссылки, начинающиеся с #
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            // Добавляем обработчик событий для каждой ссылки
+            anchor.addEventListener('click', function (e) {
+                // Предотвращаем стандартное поведение ссылки
+                e.preventDefault();
 
-	anchor.addEventListener('touchstart', function (e) {
-		e.preventDefault();
-		const targetId = this.getAttribute('href');
-		scrollTo(targetId);
-	});
-});
+                // Получаем целевой элемент по его идентификатору
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
 
-function scrollTo(targetId) {
-	document.querySelector(targetId).scrollIntoView({
-		behavior: 'smooth'
-	});
-}
+                // Плавно прокручиваем страницу к целевому элементу
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
 
 /* Копирование номера телефона */
 const phoneNumberBlock = document.getElementById('phone_number');
