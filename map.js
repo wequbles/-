@@ -1,16 +1,23 @@
 "use strict";
 
 /* Прокручивание к контактам */
-const anchors = document.querySelectorAll('a[href*==#"]')
-for (let anchor of anchors) {
-anchor.addEventListener("click", function(event) { event. preventDefault();
-const blockID = anchor.getAttribute("href")
-document.query5elector(** + blockID).scrollIntoView({
-behavior: "smooth",
-blockt "start"
-})
-})
-}
+    document.addEventListener('DOMContentLoaded', function() {
+        const anchors = document.querySelectorAll('a[href*="#"]');
+        for (let anchor of anchors) {
+            anchor.addEventListener("click", function(event) {
+                event.preventDefault();
+                const blockID = anchor.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(blockID);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            });
+        }
+    });
 
 /* Копирование номера телефона */
 const phoneNumberBlock = document.getElementById('phone_number');
