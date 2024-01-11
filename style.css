@@ -213,7 +213,7 @@ body {
   font-style: normal;
 }
 html, body {
-  background: #0F172A;
+  background: #000;
 }
 
 body {
@@ -343,9 +343,6 @@ body {
 .offer_btn_1 {
   padding: 16px 32px;
   font-weight: 500;
-  color: #fff;
-  border-radius: 50px;
-  background: #2563EB;
 }
 
 .offer_btn_2 {
