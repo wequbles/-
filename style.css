@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  color: #fff;
+  color: #0F172A;
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
@@ -213,7 +213,7 @@ body {
   font-style: normal;
 }
 html, body {
-  background: #000;
+  background: #F2E4C9;
 }
 
 body {
@@ -268,14 +268,14 @@ body {
   white-space: nowrap;
 }
 .hero__title h1 {
-  font-size: 100px;
-  line-height: 80px;
+  font-size: 72px;
+  line-height: 79px;
 }
 .hero__title h2 {
   margin: 24px 0 0;
-  font-size: 34px;
+  font-size: 56px;
   font-family: none;
-  line-height: 38px;
+  line-height: 62px;
 }
 
 .hero__subtitle {
@@ -288,7 +288,6 @@ body {
   display: inline-block;
   margin: 24px 0 0;
   font-size: 20px;
-  font-weight: 500;
   line-height: 24px;
 }
 
@@ -315,13 +314,13 @@ body {
     text-align: center;
   }
   .hero__title h1 {
-    font-size: 90px;
-    line-height: 94px;
+    font-size: 48px;
+    line-height: 53px;
   }
   .hero__title h2 {
     margin: 8px 0 0;
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 40px;
+    line-height: 44px;
   }
   .hero__subtitle {
     margin: 24px 0 0;
@@ -343,6 +342,9 @@ body {
 .offer_btn_1 {
   padding: 16px 32px;
   font-weight: 500;
+  color: #fff;
+  border-radius: 50px;
+  background: #2563EB;
 }
 
 .offer_btn_2 {
