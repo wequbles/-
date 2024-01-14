@@ -118,7 +118,7 @@ body {
 @font-face {
   font-family: "Gr-Memories";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-display: swap;
   src: url("fonts/Gr-Memories.eot");
   src: url("fonts/Gr-Memories.eot?#iefix") format("embedded-opentype"), url("fonts/Gr-Memories.woff2") format("woff2"), url("fonts/Gr-Memories.woff") format("woff");
@@ -268,9 +268,11 @@ body {
 }
 .logo_clouds .uno {
   font-family: "Kodchasan";
+  font-weight: 700;
 }
 .logo_clouds .elpaza {
   font-family: "Chisel";
+  font-weight: 700;
   letter-spacing: 4px;
 }
 .logo_clouds .luxio {
@@ -293,7 +295,6 @@ body {
 
 .logo__name {
   font-size: 24px;
-  font-weight: 700;
 }
 
 @media (max-width: 1024px) {
