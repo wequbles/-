@@ -115,13 +115,6 @@ body {
   font-display: swap;
   src: url("fonts/Chisel.ttf") format("truetype");
 }
-@font-face {
-  font-family: "Memories";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/Memories.ttf") format("truetype");
-}
 html, body {
   background: #181818;
 }
