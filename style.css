@@ -116,11 +116,11 @@ body {
   src: url("fonts/Chisel.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Gr-Memories";
+  font-family: "Memories";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/Gr-Memories.ttf") format("truetype");
+  src: url("fonts/Memories.ttf") format("truetype");
 }
 html, body {
   background: #181818;
@@ -273,7 +273,7 @@ body {
   letter-spacing: 4px;
 }
 .logo_clouds .luxio {
-  font-family: "Gr-Memories";
+  font-family: "Memories";
   letter-spacing: 1px;
 }
 
