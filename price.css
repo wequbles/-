@@ -155,49 +155,6 @@ body {
           flex: 1 1 auto;
 }
 
-.offer_btn {
-  padding: 20px 40px;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 0.2px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 2px solid #e2d6c5;
-}
-
-.go_button {
-  padding: 20px 40px;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 0.2px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.go_button svg {
-  margin: 0 0 0 8px;
-}
-
-@media (max-width: 1024px) {
-  .offer_btn.go_button {
-    padding: 14px 40px;
-  }
-}
 img {
   width: 100vw;
 }
