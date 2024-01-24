@@ -1,5 +1,14 @@
 "use strict";
 
+const lightBtn = document.getElementById('light');
+lightBtn.addEventListener('click', () => {
+	if (lightBtn.getAttribute('data-light') == 'true') {
+		lightBtn.setAttribute('data-light', 'false');
+	} else {
+		lightBtn.setAttribute('data-light', 'true');
+	}
+});
+
 /* Прокручивание к контактам */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
@@ -20,6 +29,38 @@ function scrollTo(targetId) {
 		behavior: 'smooth'
 	});
 }
+
+/* Кнопки слайдера */
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const scroller = document.getElementById('gallery__scroller');
+
+// Функция для проверки положения слайдера и скрытия/показа кнопок
+function checkSliderPosition() {
+	const isAtBeginning = scroller.scrollLeft === 0;
+	const isAtEnd = scroller.scrollLeft + scroller.clientWidth === scroller.scrollWidth;
+
+	// Скрыть/показать кнопки в зависимости от положения слайдера
+	prevBtn.style.display = isAtBeginning ? 'none' : 'block';
+	nextBtn.style.display = isAtEnd ? 'none' : 'block';
+}
+
+// Добавить обработчик события прокрутки
+scroller.addEventListener('scroll', checkSliderPosition);
+
+// Добавить обработчики событий для кнопок
+nextBtn.addEventListener('click', () => {
+	scroller.scrollBy({ left: 200 });
+	checkSliderPosition();
+});
+
+prevBtn.addEventListener('click', () => {
+	scroller.scrollBy({ left: -200 });
+	checkSliderPosition();
+});
+
+// Проверить положение слайдера при загрузке страницы
+checkSliderPosition();
 
 /* Копирование номера телефона */
 const phoneNumberBlock = document.getElementById('phone_number');
