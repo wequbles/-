@@ -41,7 +41,7 @@ console.log(totalWidthBlocks/numberOfBlocks)
 
 function checkSliderPosition() {
 	const isAtBeginning = scroller.scrollLeft === 0;
-	const isAtEnd = scroller.scrollLeft + scroller.clientWidth === scroller.scrollWidth;
+	const isAtEnd = scroller.scrollLeft + scroller.offsetWidth === scroller.scrollWidth;
 
 	prevBtn.style.display = isAtBeginning ? 'none' : 'block';
 	nextBtn.style.display = isAtEnd ? 'none' : 'block';
