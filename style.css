@@ -336,7 +336,6 @@ body {
   overflow-x: scroll;
   -ms-scroll-snap-type: inline mandatory;
       scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
   scroll-behavior: smooth;
 }
 

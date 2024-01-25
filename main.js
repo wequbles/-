@@ -34,14 +34,14 @@ function scrollTo(targetId) {
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const scroller = document.getElementById('gallery__scroller');
+
 const scrollerBlocks = document.querySelectorAll('.gallery__block');
 const totalWidthBlocks = Array.from(scrollerBlocks).reduce((i, block) => i + block.offsetWidth, 0);
 const numberOfBlocks = scrollerBlocks.length;
-console.log(totalWidthBlocks/numberOfBlocks)
 
 function checkSliderPosition() {
 	const isAtBeginning = scroller.scrollLeft === 0;
-	const isAtEnd = scroller.scrollLeft + scroller.offsetWidth === scroller.scrollWidth;
+	const isAtEnd = scroller.scrollLeft + scroller.clientWidth === scroller.scrollWidth;
 
 	prevBtn.style.display = isAtBeginning ? 'none' : 'block';
 	nextBtn.style.display = isAtEnd ? 'none' : 'block';
