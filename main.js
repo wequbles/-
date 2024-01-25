@@ -34,32 +34,31 @@ function scrollTo(targetId) {
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const scroller = document.getElementById('gallery__scroller');
+const scrollerBlocks = document.querySelectorAll('.gallery__block');
+const totalWidthBlocks = Array.from(scrollerBlocks).reduce((i, block) => i + block.offsetWidth, 0);
+const numberOfBlocks = scrollerBlocks.length;
+console.log(totalWidthBlocks/numberOfBlocks)
 
-// Функция для проверки положения слайдера и скрытия/показа кнопок
 function checkSliderPosition() {
 	const isAtBeginning = scroller.scrollLeft === 0;
 	const isAtEnd = scroller.scrollLeft + scroller.clientWidth === scroller.scrollWidth;
 
-	// Скрыть/показать кнопки в зависимости от положения слайдера
 	prevBtn.style.display = isAtBeginning ? 'none' : 'block';
 	nextBtn.style.display = isAtEnd ? 'none' : 'block';
 }
 
-// Добавить обработчик события прокрутки
 scroller.addEventListener('scroll', checkSliderPosition);
 
-// Добавить обработчики событий для кнопок
 nextBtn.addEventListener('click', () => {
-	scroller.scrollBy({ left: 200 });
+	scroller.scrollBy({ left: (totalWidthBlocks / numberOfBlocks) });
 	checkSliderPosition();
 });
 
 prevBtn.addEventListener('click', () => {
-	scroller.scrollBy({ left: -200 });
+	scroller.scrollBy({ left: - (totalWidthBlocks / numberOfBlocks) });
 	checkSliderPosition();
 });
 
-// Проверить положение слайдера при загрузке страницы
 checkSliderPosition();
 
 /* Копирование номера телефона */
