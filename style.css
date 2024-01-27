@@ -643,6 +643,8 @@ figure img {
   display: -ms-flexbox;
   display: flex;
   gap: 23px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .masters__img {
